@@ -42,9 +42,6 @@ namespace bgslibrary
 				return img_background;
 			}
 
-			virtual void flush(){};
-			virtual void setParameters(int sensitivity, int trainingSensitivity, int learningRate, int trainingLearningRate, int trainingSteps) {}
-
 			virtual void process(const cv::Mat &img_input, cv::Mat &img_foreground, cv::Mat &img_background) = 0;
 			virtual ~IBGS() {}
 
