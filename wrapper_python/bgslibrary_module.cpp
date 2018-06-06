@@ -143,6 +143,8 @@ namespace fs
 			py::class_<LBAdaptiveSOM>("LBAdaptiveSOM")
 				.def("apply", &LBAdaptiveSOM::apply)
 				.def("getBackgroundModel", &LBAdaptiveSOM::getBackgroundModel)
+				.def("flush", &LBAdaptiveSOM::flush)
+				.def("setParameters", &LBAdaptiveSOM::setParameters)
 				;
 
 			py::class_<LBFuzzyAdaptiveSOM>("LBFuzzyAdaptiveSOM")
