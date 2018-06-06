@@ -22,14 +22,14 @@ LBAdaptiveSOM::LBAdaptiveSOM() :
   sensitivity(75), trainingSensitivity(245), learningRate(62), trainingLearningRate(255), trainingSteps(55)
 {
   m_pBGModel = nullptr;
-  std::cout << "LBAdaptiveSOM()" << std::endl;
+  std::cout << "LBAdaptiveSOM::LBAdaptiveSOM()" << std::endl;
   setup("./config/LBAdaptiveSOM.xml");
 }
 
 LBAdaptiveSOM::~LBAdaptiveSOM()
 {
   delete m_pBGModel;
-  std::cout << "~LBAdaptiveSOM()" << std::endl;
+  std::cout << "LBAdaptiveSOM::~LBAdaptiveSOM()" << std::endl;
 }
 
 void LBAdaptiveSOM::process(const cv::Mat &img_input, cv::Mat &img_output, cv::Mat &img_bgmodel)
