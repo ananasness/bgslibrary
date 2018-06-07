@@ -91,28 +91,10 @@ void LBAdaptiveSOM::flush()
 
 void LBAdaptiveSOM::saveConfig()
 {
-  CvFileStorage* fs = cvOpenFileStorage(config_xml.c_str(), nullptr, CV_STORAGE_WRITE);
 
-  cvWriteInt(fs, "sensitivity", sensitivity);
-  cvWriteInt(fs, "trainingSensitivity", trainingSensitivity);
-  cvWriteInt(fs, "learningRate", learningRate);
-  cvWriteInt(fs, "trainingLearningRate", trainingLearningRate);
-  cvWriteInt(fs, "trainingSteps", trainingSteps);
-  cvWriteInt(fs, "showOutput", showOutput);
-
-  cvReleaseFileStorage(&fs);
 }
 
 void LBAdaptiveSOM::loadConfig()
 {
-  CvFileStorage* fs = cvOpenFileStorage(config_xml.c_str(), nullptr, CV_STORAGE_READ);
 
-  sensitivity = cvReadIntByName(fs, nullptr, "sensitivity", 75);
-  trainingSensitivity = cvReadIntByName(fs, nullptr, "trainingSensitivity", 245);
-  learningRate = cvReadIntByName(fs, nullptr, "learningRate", 62);
-  trainingLearningRate = cvReadIntByName(fs, nullptr, "trainingLearningRate", 255);
-  trainingSteps = cvReadIntByName(fs, nullptr, "trainingSteps", 55);
-  showOutput = cvReadIntByName(fs, 0, "showOutput", true);
-
-  cvReleaseFileStorage(&fs);
 }
